@@ -18,5 +18,6 @@ namespace OhKalkulator.Models
         public DomacaMera DomacaMera { get; set; }
         public int KategorijaZivilaId { get; set; }
         public KategorijaZivila KategorijaZivila { get; set; }
+        public ICollection<PripravljenaJed> PripravljeneJedi { get; set; }
     }
 }

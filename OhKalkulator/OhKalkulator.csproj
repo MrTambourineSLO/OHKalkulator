@@ -164,6 +164,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="EntityConfigurations\DomacaMeraConfiguration.cs" />
     <Compile Include="EntityConfigurations\KategorijaZivilaConfiguration.cs" />
+    <Compile Include="EntityConfigurations\PripravljenaJedConfiguration.cs" />
     <Compile Include="EntityConfigurations\ZiviloConfiguration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -184,12 +185,17 @@
     <Compile Include="Migrations\201608181747542_AddedDomacaMeraTableAndRelationToZivila.Designer.cs">
       <DependentUpon>201608181747542_AddedDomacaMeraTableAndRelationToZivila.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608181900124_AddedPripravljenaJedTable.cs" />
+    <Compile Include="Migrations\201608181900124_AddedPripravljenaJedTable.Designer.cs">
+      <DependentUpon>201608181900124_AddedPripravljenaJedTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DomacaMera.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\KategorijaZivila.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PripravljenaJed.cs" />
     <Compile Include="Models\Zivilo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -287,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608181747542_AddedDomacaMeraTableAndRelationToZivila.resx">
       <DependentUpon>201608181747542_AddedDomacaMeraTableAndRelationToZivila.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608181900124_AddedPripravljenaJedTable.resx">
+      <DependentUpon>201608181900124_AddedPripravljenaJedTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
