@@ -23,6 +23,7 @@ namespace OhKalkulator.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Zivilo> Zivila { get; set; }
+        public DbSet<KategorijaZivila> KategorijeZivil { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -48,6 +49,23 @@ namespace OhKalkulator.Models
             modelBuilder.Entity<Zivilo>()
                 .Property(p => p.SifraGorenje)
                 .IsOptional();
+            /*
+               ===   Overridanje konvencij za tabelo KategorijaZivila  ===
+            */
+            modelBuilder.Entity<KategorijaZivila>()
+                .ToTable("KategorijeZivil")
+                .Property(p => p.Ime)
+                .HasColumnType("nvarchar")
+                .HasMaxLength(255)
+                .IsRequired();
+            
+            /*
+               ===   Overridanje konvencij za relacijo KategorijaZivila(1) -> (N)Zivila  ===
+            */
+
+            modelBuilder.Entity<KategorijaZivila>()
+                .HasMany(p => p.Zivila).WithRequired(p => p.KategorijaZivila)
+                .HasForeignKey(f => f.KategorijaZivilaId);
 
 
 
