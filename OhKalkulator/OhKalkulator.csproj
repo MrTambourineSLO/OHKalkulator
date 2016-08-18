@@ -162,6 +162,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="EntityConfigurations\DomacaMeraConfiguration.cs" />
+    <Compile Include="EntityConfigurations\KategorijaZivilaConfiguration.cs" />
+    <Compile Include="EntityConfigurations\ZiviloConfiguration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

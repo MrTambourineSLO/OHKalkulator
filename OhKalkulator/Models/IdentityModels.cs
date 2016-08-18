@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using OhKalkulator.EntityConfigurations;
 using OhKalkulator.Models;
 
 namespace OhKalkulator.Models
@@ -32,66 +33,10 @@ namespace OhKalkulator.Models
         protected override void OnModelCreating(System.Data.Entity.DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //Nvarchar za Šumnike in sičnike
-            
-            /*
-                ===   Overridanje konvencij za tabelo Zivila  ===
-             */
-            modelBuilder.Entity<Zivilo>()
-                .ToTable("Zivila")
-                .Property(p => p.Ime)
-                .IsRequired()
-                .HasColumnType("nvarchar")
-                .HasMaxLength(255);
-            
-            modelBuilder.Entity<Zivilo>()
-                .Property(p => p.OhKoeficient).IsRequired();
-            modelBuilder.Entity<Zivilo>()
-                .Property(p => p.SifraGorenje)
-                .IsOptional();
-            /*
-               ===   Overridanje konvencij za tabelo KategorijaZivila  ===
-            */
-            modelBuilder.Entity<KategorijaZivila>()
-                .ToTable("KategorijeZivil")
-                .Property(p => p.Ime)
-                .HasColumnType("nvarchar")
-                .HasMaxLength(255)
-                .IsRequired();
-            /*
-              ===   Overridanje konvencij za tabelo DomacaMera  ===
-           */
-            modelBuilder.Entity<DomacaMera>()
-                .ToTable("DomaceMere")
-                .Property(p => p.ImeMere)
-                .IsRequired()
-                .HasColumnType("nvarchar")
-                .HasMaxLength(255);
-            
-            
-
-            /*
-               ===   Overridanje konvencij za relacijo KategorijaZivila(1) -> (N)Zivila  ===
-            */
-
-            modelBuilder.Entity<KategorijaZivila>()
-                .HasMany(p => p.Zivila).WithRequired(p => p.KategorijaZivila)
-                .HasForeignKey(f => f.KategorijaZivilaId);
-            
-            
-            /*
-               ===   Overridanje konvencij za relacijo DomacaMera(1) -> (N)Zivila  ===
-            */
-            
-            modelBuilder.Entity<DomacaMera>()
-                .HasMany(p => p.Zivila)
-                .WithRequired(p => p.DomacaMera)
-                .HasForeignKey(f => f.DomacaMeraId);
-
-
-
-
-
+            // Fluent API konfiguracijo sem premaknil v lastne razrede za vsako tabelo
+            modelBuilder.Configurations.Add(new ZiviloConfiguration());
+            modelBuilder.Configurations.Add(new KategorijaZivilaConfiguration());
+            modelBuilder.Configurations.Add(new DomacaMeraConfiguration());
 
         }
 
