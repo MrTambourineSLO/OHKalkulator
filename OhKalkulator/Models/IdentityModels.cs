@@ -58,7 +58,18 @@ namespace OhKalkulator.Models
                 .HasColumnType("nvarchar")
                 .HasMaxLength(255)
                 .IsRequired();
+            /*
+              ===   Overridanje konvencij za tabelo DomacaMera  ===
+           */
+            modelBuilder.Entity<DomacaMera>()
+                .ToTable("DomaceMere")
+                .Property(p => p.ImeMere)
+                .IsRequired()
+                .HasColumnType("nvarchar")
+                .HasMaxLength(255);
             
+            
+
             /*
                ===   Overridanje konvencij za relacijo KategorijaZivila(1) -> (N)Zivila  ===
             */
@@ -66,8 +77,16 @@ namespace OhKalkulator.Models
             modelBuilder.Entity<KategorijaZivila>()
                 .HasMany(p => p.Zivila).WithRequired(p => p.KategorijaZivila)
                 .HasForeignKey(f => f.KategorijaZivilaId);
-
-
+            
+            
+            /*
+               ===   Overridanje konvencij za relacijo DomacaMera(1) -> (N)Zivila  ===
+            */
+            
+            modelBuilder.Entity<DomacaMera>()
+                .HasMany(p => p.Zivila)
+                .WithRequired(p => p.DomacaMera)
+                .HasForeignKey(f => f.DomacaMeraId);
 
 
 

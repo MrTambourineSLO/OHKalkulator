@@ -177,8 +177,13 @@
     <Compile Include="Migrations\201608181311551_AddedKategorijeZivilTableAndRelationshipPropertiesToZivilaAndKZ.Designer.cs">
       <DependentUpon>201608181311551_AddedKategorijeZivilTableAndRelationshipPropertiesToZivilaAndKZ.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608181747542_AddedDomacaMeraTableAndRelationToZivila.cs" />
+    <Compile Include="Migrations\201608181747542_AddedDomacaMeraTableAndRelationToZivila.Designer.cs">
+      <DependentUpon>201608181747542_AddedDomacaMeraTableAndRelationToZivila.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DomacaMera.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\KategorijaZivila.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -276,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608181311551_AddedKategorijeZivilTableAndRelationshipPropertiesToZivilaAndKZ.resx">
       <DependentUpon>201608181311551_AddedKategorijeZivilTableAndRelationshipPropertiesToZivilaAndKZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608181747542_AddedDomacaMeraTableAndRelationToZivila.resx">
+      <DependentUpon>201608181747542_AddedDomacaMeraTableAndRelationToZivila.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -14,8 +14,8 @@ namespace OhKalkulator.Models
         //OhKoeficient predstavlja decimalno število gramOh/gramŽivila
         public decimal OhKoeficient { get; set; }
         // Število OH v dani količini živila se lahko izračuna iz OhKoeficienta ter Teže v gramih
-        
-        //public DomacaMera DomacaMera { get; set; }
+        public int DomacaMeraId { get; set; }
+        public DomacaMera DomacaMera { get; set; }
         public int KategorijaZivilaId { get; set; }
         public KategorijaZivila KategorijaZivila { get; set; }
     }
