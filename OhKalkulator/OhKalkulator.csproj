@@ -169,6 +169,10 @@
     <Compile Include="Migrations\201608181151578_InitialModel.Designer.cs">
       <DependentUpon>201608181151578_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608181200053_AddedZivilaTable.cs" />
+    <Compile Include="Migrations\201608181200053_AddedZivilaTable.Designer.cs">
+      <DependentUpon>201608181200053_AddedZivilaTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -261,6 +265,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201608181151578_InitialModel.resx">
       <DependentUpon>201608181151578_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608181200053_AddedZivilaTable.resx">
+      <DependentUpon>201608181200053_AddedZivilaTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
