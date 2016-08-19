@@ -164,6 +164,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="EntityConfigurations\DomacaMeraConfiguration.cs" />
     <Compile Include="EntityConfigurations\KategorijaZivilaConfiguration.cs" />
+    <Compile Include="EntityConfigurations\ObrokConfiguration.cs" />
     <Compile Include="EntityConfigurations\PripravljenaJedConfiguration.cs" />
     <Compile Include="EntityConfigurations\ZiviloConfiguration.cs" />
     <Compile Include="Global.asax.cs">
@@ -189,12 +190,17 @@
     <Compile Include="Migrations\201608181900124_AddedPripravljenaJedTable.Designer.cs">
       <DependentUpon>201608181900124_AddedPripravljenaJedTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608191847245_AddedObrokiTableAndRelationshipToPripravljeneJedi.cs" />
+    <Compile Include="Migrations\201608191847245_AddedObrokiTableAndRelationshipToPripravljeneJedi.Designer.cs">
+      <DependentUpon>201608191847245_AddedObrokiTableAndRelationshipToPripravljeneJedi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DomacaMera.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\KategorijaZivila.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Obrok.cs" />
     <Compile Include="Models\PripravljenaJed.cs" />
     <Compile Include="Models\Zivilo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -296,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608181900124_AddedPripravljenaJedTable.resx">
       <DependentUpon>201608181900124_AddedPripravljenaJedTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608191847245_AddedObrokiTableAndRelationshipToPripravljeneJedi.resx">
+      <DependentUpon>201608191847245_AddedObrokiTableAndRelationshipToPripravljeneJedi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

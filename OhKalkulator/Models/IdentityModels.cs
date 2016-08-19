@@ -27,6 +27,8 @@ namespace OhKalkulator.Models
         public DbSet<KategorijaZivila> KategorijeZivil { get; set; }
         public DbSet<PripravljenaJed> PripravljeneJedi { get; set; }
         public DbSet<DomacaMera> DomaceMere { get; set; }
+        public DbSet<Obrok> Obroki { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -40,7 +42,7 @@ namespace OhKalkulator.Models
             modelBuilder.Configurations.Add(new KategorijaZivilaConfiguration());
             modelBuilder.Configurations.Add(new DomacaMeraConfiguration());
             modelBuilder.Configurations.Add(new PripravljenaJedConfiguration());
-
+            modelBuilder.Configurations.Add(new ObrokConfiguration());
         }
 
         public static ApplicationDbContext Create()
