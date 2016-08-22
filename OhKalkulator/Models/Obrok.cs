@@ -10,11 +10,13 @@ namespace OhKalkulator.Models
         public Obrok()
         {
             PripravljeneJedi = new  List<PripravljenaJed>();
+            DodatnaZivila = new List<Zivilo>();
         }
         public int Id { get; set; }
         public string ImeObroka { get; set; }
-        public ICollection<PripravljenaJed> PripravljeneJedi { get; set; }
 
+        public ICollection<PripravljenaJed> PripravljeneJedi { get; set; }
+        public ICollection<Zivilo> DodatnaZivila { get; set; }
 
     }
 }

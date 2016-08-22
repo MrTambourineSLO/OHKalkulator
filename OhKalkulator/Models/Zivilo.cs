@@ -19,5 +19,6 @@ namespace OhKalkulator.Models
         public int KategorijaZivilaId { get; set; }
         public KategorijaZivila KategorijaZivila { get; set; }
         public ICollection<PripravljenaJed> PripravljeneJedi { get; set; }
+        public ICollection<Obrok> Obroki { get; set; }
     }
 }

@@ -27,7 +27,15 @@ namespace OhKalkulator.EntityConfigurations
                     m.MapRightKey("ObrokId");
 
                 });
+            HasMany(p => p.DodatnaZivila)
+                .WithMany(p => p.Obroki)
+                .Map(c =>
+                {
+                    c.ToTable("ObrokiZivila");
+                    c.MapLeftKey("ObrokId");
+                    c.MapRightKey("ZiviloId");
 
+                });
         }
     }
 }
