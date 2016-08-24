@@ -210,6 +210,10 @@
     <Compile Include="Migrations\201608242129559_AddedRelationBetweenAppUserAndZivilo.Designer.cs">
       <DependentUpon>201608242129559_AddedRelationBetweenAppUserAndZivilo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608242142226_AddedRelationBetweenAppUserAndPripravljenaJed.cs" />
+    <Compile Include="Migrations\201608242142226_AddedRelationBetweenAppUserAndPripravljenaJed.Designer.cs">
+      <DependentUpon>201608242142226_AddedRelationBetweenAppUserAndPripravljenaJed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DnevnikPrehranjevanja.cs" />
@@ -334,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608242129559_AddedRelationBetweenAppUserAndZivilo.resx">
       <DependentUpon>201608242129559_AddedRelationBetweenAppUserAndZivilo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608242142226_AddedRelationBetweenAppUserAndPripravljenaJed.resx">
+      <DependentUpon>201608242142226_AddedRelationBetweenAppUserAndPripravljenaJed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

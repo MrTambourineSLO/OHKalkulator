@@ -24,7 +24,8 @@ namespace OhKalkulator.EntityConfigurations
                     m.MapLeftKey("PripravljenaJedId");
                     m.MapRightKey("ZiviloId");
                 });
-
+            Property(p => p.UporabnikId).HasMaxLength(128);
+            HasOptional(p => p.Uporabnik).WithMany(p => p.PripravljeneJedi).HasForeignKey(f => f.UporabnikId);
         }
     }
 }

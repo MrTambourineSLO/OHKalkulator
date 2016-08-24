@@ -20,9 +20,12 @@ namespace OhKalkulator.Models
             return userIdentity;
         }
 
-        
+        //Vsak uporabnik ima poleg vgrajenih kategorij živil še zbirko svojih
         public ICollection<KategorijaZivila> KategorijeZivil { get; set; }
+        //Vsak uporabnik ima poleg vgrajenih živil še zbirko svojih
         public ICollection<Zivilo> Zivila { get; set; }
+        //Vsak uporabnik ima poleg vgrajenih pripravljenih jedi še zbirko svojih
+        public ICollection<PripravljenaJed> PripravljeneJedi{ get; set; }
     }
 
 

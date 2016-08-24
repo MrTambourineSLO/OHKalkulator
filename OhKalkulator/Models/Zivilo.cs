@@ -20,6 +20,7 @@ namespace OhKalkulator.Models
         public KategorijaZivila KategorijaZivila { get; set; }
         public ICollection<PripravljenaJed> PripravljeneJedi { get; set; }
         public ICollection<Obrok> Obroki { get; set; }
+        //Vsako Živilo si (lahko) lasti en uporabnik
         public string UporabnikId { get; set; }
         public ApplicationUser Uporabnik { get; set; }
     }
