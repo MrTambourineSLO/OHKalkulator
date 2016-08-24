@@ -24,6 +24,9 @@ namespace OhKalkulator.EntityConfigurations
             
                  Property(p => p.SifraGorenje)
                 .IsOptional();
+            Property(p => p.UporabnikId).HasMaxLength(128);
+
+            HasOptional(p => p.Uporabnik).WithMany(p => p.Zivila).HasForeignKey(f => f.UporabnikId);
         }
 
     }

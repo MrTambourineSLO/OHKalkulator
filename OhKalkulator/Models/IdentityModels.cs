@@ -22,6 +22,7 @@ namespace OhKalkulator.Models
 
         
         public ICollection<KategorijaZivila> KategorijeZivil { get; set; }
+        public ICollection<Zivilo> Zivila { get; set; }
     }
 
 
