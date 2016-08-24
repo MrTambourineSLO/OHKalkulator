@@ -17,6 +17,7 @@ namespace OhKalkulator.Models
 
         public ICollection<PripravljenaJed> PripravljeneJedi { get; set; }
         public ICollection<Zivilo> DodatnaZivila { get; set; }
-
+        public string UporabnikId { get; set; }
+        public ApplicationUser Uporabnik { get; set; }
     }
 }

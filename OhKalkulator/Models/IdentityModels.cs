@@ -26,6 +26,8 @@ namespace OhKalkulator.Models
         public ICollection<Zivilo> Zivila { get; set; }
         //Vsak uporabnik ima poleg vgrajenih pripravljenih jedi še zbirko svojih
         public ICollection<PripravljenaJed> PripravljeneJedi{ get; set; }
+        //Vsak uporabnik ima poleg vgrajenih obrokov še zbirko svojih
+        public ICollection<Obrok> Obroki { get; set; }
     }
 
 

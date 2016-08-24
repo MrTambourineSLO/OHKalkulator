@@ -36,6 +36,9 @@ namespace OhKalkulator.EntityConfigurations
                     c.MapRightKey("ZiviloId");
 
                 });
+            //Relacija z uporabnikom
+            Property(p => p.UporabnikId).HasMaxLength(128);
+            HasOptional(p => p.Uporabnik).WithMany(p => p.Obroki).HasForeignKey(p => p.UporabnikId);
         }
     }
 }
