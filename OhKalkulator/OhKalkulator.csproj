@@ -198,6 +198,14 @@
     <Compile Include="Migrations\201608221837406_AddedDodatnaZivilaPropertyToObroki.Designer.cs">
       <DependentUpon>201608221837406_AddedDodatnaZivilaPropertyToObroki.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201608221847084_ChangedLeftAndRightKeyMappingForPripravljeneJediObroki.cs" />
+    <Compile Include="Migrations\201608221847084_ChangedLeftAndRightKeyMappingForPripravljeneJediObroki.Designer.cs">
+      <DependentUpon>201608221847084_ChangedLeftAndRightKeyMappingForPripravljeneJediObroki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608242114343_AddedRelationBetweenAppUserAndKategorijaZivila.cs" />
+    <Compile Include="Migrations\201608242114343_AddedRelationBetweenAppUserAndKategorijaZivila.Designer.cs">
+      <DependentUpon>201608242114343_AddedRelationBetweenAppUserAndKategorijaZivila.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DnevnikPrehranjevanja.cs" />
@@ -313,6 +321,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608221837406_AddedDodatnaZivilaPropertyToObroki.resx">
       <DependentUpon>201608221837406_AddedDodatnaZivilaPropertyToObroki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608221847084_ChangedLeftAndRightKeyMappingForPripravljeneJediObroki.resx">
+      <DependentUpon>201608221847084_ChangedLeftAndRightKeyMappingForPripravljeneJediObroki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608242114343_AddedRelationBetweenAppUserAndKategorijaZivila.resx">
+      <DependentUpon>201608242114343_AddedRelationBetweenAppUserAndKategorijaZivila.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

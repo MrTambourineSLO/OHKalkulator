@@ -7,6 +7,8 @@ namespace OhKalkulator.Models
 {
     public class DnevnikPrehranjevanja
     {
+        public int Id { get; set; }
+        public int IdUporabnika { get; set; }
 
     }
 }

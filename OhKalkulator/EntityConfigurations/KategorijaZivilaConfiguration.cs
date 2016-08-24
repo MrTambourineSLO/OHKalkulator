@@ -18,6 +18,9 @@ namespace OhKalkulator.EntityConfigurations
            .HasColumnType("nvarchar")
            .HasMaxLength(255)
            .IsRequired();
+
+            //Hashed id ima max dolžino 128 znakov v IdentityModels.cs
+            Property(p => p.UporabnikId).HasMaxLength(128);
             /*
               ===   Overridanje konvencij za relacijo KategorijaZivila(1) -> (N)Zivila  ===
            */
@@ -25,6 +28,8 @@ namespace OhKalkulator.EntityConfigurations
             HasMany(p => p.Zivila)
                 .WithRequired(p => p.KategorijaZivila)
                 .HasForeignKey(f => f.KategorijaZivilaId);
+            HasOptional(p => p.Uporabnik).WithMany(u => u.KategorijeZivil).HasForeignKey(f => f.UporabnikId);
+            
         }
     }
 }

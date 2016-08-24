@@ -23,8 +23,8 @@ namespace OhKalkulator.EntityConfigurations
                 .Map(m =>
                 {
                     m.ToTable("PripravljeneJediObroki");
-                    m.MapLeftKey("PripravljenaJedId");
-                    m.MapRightKey("ObrokId");
+                    m.MapLeftKey("ObrokId");
+                    m.MapRightKey("PripravljenaJedId");
 
                 });
             HasMany(p => p.DodatnaZivila)
