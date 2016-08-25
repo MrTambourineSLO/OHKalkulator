@@ -19,5 +19,6 @@ namespace OhKalkulator.Models
         public ICollection<Zivilo> DodatnaZivila { get; set; }
         public string UporabnikId { get; set; }
         public ApplicationUser Uporabnik { get; set; }
+        public DnevnikPrehranjevanja DnevnikPrehranjevanja { get; set; }
     }
 }

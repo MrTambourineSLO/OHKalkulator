@@ -33,12 +33,13 @@ namespace OhKalkulator.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        /*Tabele code-first za EF*/
         public DbSet<Zivilo> Zivila { get; set; }
         public DbSet<KategorijaZivila> KategorijeZivil { get; set; }
         public DbSet<PripravljenaJed> PripravljeneJedi { get; set; }
         public DbSet<DomacaMera> DomaceMere { get; set; }
         public DbSet<Obrok> Obroki { get; set; }
-
+        public DbSet<DnevnikPrehranjevanja> DnevnikiPrehranjevanja { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -53,6 +54,7 @@ namespace OhKalkulator.Models
             modelBuilder.Configurations.Add(new DomacaMeraConfiguration());
             modelBuilder.Configurations.Add(new PripravljenaJedConfiguration());
             modelBuilder.Configurations.Add(new ObrokConfiguration());
+            modelBuilder.Configurations.Add(new DnevnikPrehranjevanjaConfiguration());
         }
 
         public static ApplicationDbContext Create()
