@@ -12,6 +12,7 @@ namespace OhKalkulator.Models
         public DateTime? Datum { get; set; }
         public TipObroka TipObroka { get; set; }
         public Obrok Obrok { get; set; }
+        public ApplicationUser Uporabnik { get; set; }
 
 
 

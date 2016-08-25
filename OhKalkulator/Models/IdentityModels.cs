@@ -20,6 +20,7 @@ namespace OhKalkulator.Models
             return userIdentity;
         }
 
+        public DnevnikPrehranjevanja DnevnikPrehranjevanja { get; set; }
         //Vsak uporabnik ima poleg vgrajenih kategorij živil še zbirko svojih
         public ICollection<KategorijaZivila> KategorijeZivil { get; set; }
         //Vsak uporabnik ima poleg vgrajenih živil še zbirko svojih
@@ -55,6 +56,7 @@ namespace OhKalkulator.Models
             modelBuilder.Configurations.Add(new PripravljenaJedConfiguration());
             modelBuilder.Configurations.Add(new ObrokConfiguration());
             modelBuilder.Configurations.Add(new DnevnikPrehranjevanjaConfiguration());
+            modelBuilder.Configurations.Add(new ApplicationUserConfiguration());
         }
 
         public static ApplicationDbContext Create()

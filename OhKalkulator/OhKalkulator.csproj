@@ -162,6 +162,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="EntityConfigurations\ApplicationUserConfiguration.cs" />
     <Compile Include="EntityConfigurations\DnevnikPrehranjevanjaConfiguration.cs" />
     <Compile Include="EntityConfigurations\DomacaMeraConfiguration.cs" />
     <Compile Include="EntityConfigurations\KategorijaZivilaConfiguration.cs" />
@@ -222,6 +223,10 @@
     <Compile Include="Migrations\201608251821019_AddedDnevnikPrehranjevanjaTableAndRelationToObrokTable.cs" />
     <Compile Include="Migrations\201608251821019_AddedDnevnikPrehranjevanjaTableAndRelationToObrokTable.Designer.cs">
       <DependentUpon>201608251821019_AddedDnevnikPrehranjevanjaTableAndRelationToObrokTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201608251837102_AddedRelationshipBetweenUserAndDnevnikPrehranjevanja.cs" />
+    <Compile Include="Migrations\201608251837102_AddedRelationshipBetweenUserAndDnevnikPrehranjevanja.Designer.cs">
+      <DependentUpon>201608251837102_AddedRelationshipBetweenUserAndDnevnikPrehranjevanja.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -356,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608251821019_AddedDnevnikPrehranjevanjaTableAndRelationToObrokTable.resx">
       <DependentUpon>201608251821019_AddedDnevnikPrehranjevanjaTableAndRelationToObrokTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201608251837102_AddedRelationshipBetweenUserAndDnevnikPrehranjevanja.resx">
+      <DependentUpon>201608251837102_AddedRelationshipBetweenUserAndDnevnikPrehranjevanja.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
