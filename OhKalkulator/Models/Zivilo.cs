@@ -7,6 +7,11 @@ namespace OhKalkulator.Models
 {
     public class Zivilo
     {
+        public Zivilo()
+        {
+            PripravljeneJedi = new List<PripravljenaJed>();
+            Obroki = new List<Obrok>();
+        }
         public int Id { get; set; }
         public int SifraGorenje { get; set; }
         public string Ime { get; set; }

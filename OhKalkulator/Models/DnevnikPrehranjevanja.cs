@@ -10,5 +10,6 @@ namespace OhKalkulator.Models
         public int Id { get; set; }
         public int IdUporabnika { get; set; }
 
+
     }
 }
